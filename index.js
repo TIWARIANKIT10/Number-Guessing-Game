@@ -23,6 +23,8 @@ function check(){
  if(inputvalue==randomnumber){
     attempttag.textContent ="you have guessed right in attempt "+ attemptNumber;
     attempttag.style.color = "green";
+    document.getElementById('submit').disabled = true;
+
  }
 
 else if (inputvalue>10){
@@ -42,6 +44,7 @@ function reset(){
     attemptNumber =0;
  randomnumber = Math.floor((Math.random()*10)+1);
  let attempttag = document.getElementById('attempt').textContent="";
+ document.getElementById('submit').disabled = false;
 
 }
 
