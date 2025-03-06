@@ -8,7 +8,17 @@ function check(){
  let inputvalue = input.value;
  attemptNumber++;
  attempttag.textContent = "Attempt"+attemptNumber;
- attempttag.style.color = "tomato"
+ attempttag.style.color = "tomato";
+
+ if(inputvalue===''){
+
+        attempttag.textContent="Enter any Vaid number "
+        attempttag.style.color="red";
+        return;
+    
+ }
+
+ 
 
  if(inputvalue==randomnumber){
     attempttag.textContent ="you have guessed right in attempt "+ attemptNumber;
@@ -24,6 +34,7 @@ else if (inputvalue>10){
     attempttag.textContent="you have enterd to low number"
     attempttag.style.color="red";
  }
+ else;
 
 }
 
